@@ -41,9 +41,7 @@ public class AddBookActivity extends AppCompatActivity {
             Toast.makeText(this, "Заполните поля", Toast.LENGTH_SHORT).show();
             return;
         }
-
         long result = dbHelper.addBook(bookName, bookAuthor); // Добавление книги в базу данных
-
         if (result > 0) { // Если добавление прошло успешно
             Toast.makeText(this, "Книга добавлена", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(AddBookActivity.this, MainActivity.class)); // Переход на главную активность
